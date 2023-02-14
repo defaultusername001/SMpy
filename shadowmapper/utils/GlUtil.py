@@ -1,0 +1,32 @@
+import OpenGL.GL as GL
+
+class GlUtil:
+    @staticmethod
+    def drawCube(gl, size, red, green, blue):
+        GL.glColor3f(red, green, blue)
+        GL.glBegin(GL.GL_QUADS)
+        GL.glVertex3f(size, size, -size)
+        GL.glVertex3f(-size, size, -size)
+        GL.glVertex3f(-size, size, size)
+        GL.glVertex3f(size, size, size)
+        GL.glVertex3f(size, -size, size)
+        GL.glVertex3f(-size, -size, size)
+        GL.glVertex3f(-size, -size, -size)
+        GL.glVertex3f(size, -size, -size)
+        GL.glVertex3f(size, size, size)
+        GL.glVertex3f(-size, size, size)
+        GL.glVertex3f(-size, -size, size)
+        GL.glVertex3f(size, -size, size)
+        GL.glVertex3f(-size, -size, -size)
+        GL.glVertex3f(-size, size, -size)
+        GL.glVertex3f(size, size, -size)
+        GL.glVertex3f(-size, size, size)
+        GL.glVertex3f(-size, size, -size)
+        GL.glVertex3f(-size, -size, -size)
+        GL.glVertex3f(-size, -size, size)
+        GL.glVertex3f(size, size, -size)
+        GL.glVertex3f(size, size, size)
+        GL.glVertex3f(size, -size, size)
+        GL.glVertex3f(size, -size, -size)
+        GL.glEnd()
+        GL.glColor3f(1.0, 1.0, 1.0)
